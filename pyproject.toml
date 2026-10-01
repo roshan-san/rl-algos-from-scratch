@@ -7,10 +7,17 @@ authors = [
     { name = "Roshan R", email = "roshan.tsx@gmail.com" }
 ]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "gym>=0.26.2",
+    "matplotlib>=3.11.2",
+    "pandas>=3.0.6",
+    "ruff>=0.16.9",
+    "torch>=2.14.1",
+    "wandb>=0.30.0",
+]
 
 [project.scripts]
-rl-algos-from-scratch = "rl_algos_from_scratch:main"
+dev = "rl_algos_from_scratch:main"
 
 [build-system]
 requires = ["uv_build>=0.12.1,<0.13.0"]
