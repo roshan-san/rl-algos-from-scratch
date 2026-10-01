@@ -3,7 +3,7 @@ from torch import nn
 
 
 class Td3Critic(nn.Module):
-    def __init__(self, input_dim, hidden_dim, output_dim):
+    def __init__(self, input_dim: int, hidden_dim: tuple, output_dim: int):
         self.input_layer = nn.Linear(input_dim, hidden_dim[0])
         self.hidden_layers = nn.ModuleList()
 

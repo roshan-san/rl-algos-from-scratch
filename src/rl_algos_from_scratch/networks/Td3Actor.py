@@ -16,7 +16,6 @@ class Td3Actor(nn.Module):
 
         self.output_layer = nn.Linear(hidden_dim[-1], output_dim)
 
-
     def forward(self, x):
         x = self.input_layer(x)
         x = self.activation_fn(x)
