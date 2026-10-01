@@ -8,12 +8,14 @@ class Td3Actor(nn.Module):
         self.hidden_layers = nn.ModuleList()
 
         self.activation_fn = F.relu
+        self.output_activation_fn = F.tanh
 
         for i in range(1, len(hidden_dim) - 1):
             layer = nn.Linear(hidden_dim[i], hidden_dim[i + 1])
             self.hidden_layers.append(layer)
 
         self.output_layer = nn.Linear(hidden_dim[-1], output_dim)
+
 
     def forward(self, x):
         x = self.input_layer(x)
@@ -23,5 +25,6 @@ class Td3Actor(nn.Module):
             x = layer(x)
             x = self.activation_fn(x)
         x = self.output_layer(x)
+        x = self.output_activation_fn(x)
 
         return x
