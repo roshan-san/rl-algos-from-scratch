@@ -1,0 +1,17 @@
+[project]
+name = "rl-algos-from-scratch"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Roshan R", email = "roshan.tsx@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = []
+
+[project.scripts]
+rl-algos-from-scratch = "rl_algos_from_scratch:main"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
