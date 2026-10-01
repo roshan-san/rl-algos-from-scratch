@@ -1,2 +1,5 @@
+from rl_algos_from_scratch.agents.td3 import td3
+
+
 def main() -> None:
-    print("Hello from rl-algos-from-scratch!")
+    td3()
